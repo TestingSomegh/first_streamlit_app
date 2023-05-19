@@ -47,7 +47,7 @@ streamlit.write('The user entered ', fruit_choice)
 
 
 # STOP execution at this point
-streamlit.stop()
+#streamlit.stop()
 
 
 streamlit.header("THe fruit load list contains:")
