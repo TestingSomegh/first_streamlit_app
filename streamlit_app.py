@@ -46,11 +46,7 @@ streamlit.write('The user entered ', fruit_choice)
 #streamlit.text(fruityvice_response.json())
 
 
-# STOP execution at this point
-#streamlit.stop()
-
-
-streamlit.header("THe fruit load list contains:")
+streamlit.header("The fruit load list contains:")
 #FUNCTION
 def get_fruit_load_list():
    with my_cnx.cursor() as my_cur:
@@ -65,6 +61,9 @@ if streamlit.button('Get Fruit Load List'):
 # Allow the end user to add a fruit to the list
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 streamlit.write('Thanks for adding ', add_my_fruit)
+
+# STOP execution at this point
+streamlit.stop()
 
 #This will not work...
 my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('from streamlit')")
